@@ -315,8 +315,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody2D: {fileID: 1448262381}
-  rotationSpeed: 100
-  boostForce: 1
+  rotationSpeed: 75
+  boostForce: 0.1
 --- !u!114 &1448262379
 MonoBehaviour:
   m_ObjectHideFlags: 0
