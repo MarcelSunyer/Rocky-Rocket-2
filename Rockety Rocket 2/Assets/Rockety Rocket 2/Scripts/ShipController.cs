@@ -5,9 +5,9 @@ using UnityEngine.InputSystem;
 
 public class ShipController : MonoBehaviour
 {
-    public ParticleSystem particle_1;
-    public ParticleSystem particle_2;
-    public ParticleSystem particle_3;
+    public ParticleSystem boost_particle_1;
+    public ParticleSystem boost_particle_2;
+    public ParticleSystem boost_particle_3;
 
     public Rigidbody2D rigidbody2D;
 
@@ -17,6 +17,16 @@ public class ShipController : MonoBehaviour
     private float rotationInput;
     private float boostInput;
 
+    private SpriteRenderer ship;
+
+    public ParticleSystem destroy_particle_1;
+    public ParticleSystem destroy_particle_2;
+    public ParticleSystem destroy_particle_3;
+
+    private void Start()
+    {
+        ship = GetComponent<SpriteRenderer>();
+    }
     void FixedUpdate()
     {
 
@@ -27,9 +37,9 @@ public class ShipController : MonoBehaviour
 
         if(boostInput == 0 )
         {
-            particle_1.Stop();
-            particle_2.Stop();
-            particle_3.Stop();  
+            boost_particle_1.Stop();
+            boost_particle_2.Stop();
+            boost_particle_3.Stop();  
         }
     }
 
@@ -41,9 +51,28 @@ public class ShipController : MonoBehaviour
     public void Boost(InputAction.CallbackContext context)
     {
         boostInput = context.ReadValue<Vector2>().y;
-        particle_1.Play();
-        particle_2.Play();
-        particle_3.Play();
+        boost_particle_1.Play();
+        boost_particle_2.Play();
+        boost_particle_3.Play();
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Asteroid"))
+        {
+            destroy_particle_1.Play();
+            destroy_particle_2.Play();
+            destroy_particle_3.Play();
+
+            ship.enabled = false;
+            StartCoroutine(DestroyShip());
+            
+
+        }
+    }
+    private IEnumerator DestroyShip()
+    {
+        yield return new WaitForSeconds(2);
+        Destroy(this.gameObject);
+    }
 }
