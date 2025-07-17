@@ -15,7 +15,7 @@ public class ShipController : MonoBehaviour
     public float boostForce = 5f;
 
     private float rotationInput;
-    private float boostInput;
+    public float boostInput;
 
     private SpriteRenderer ship;
 
@@ -65,8 +65,14 @@ public class ShipController : MonoBehaviour
             destroy_particle_3.Play();
 
             ship.enabled = false;
-            StartCoroutine(DestroyShip());
+
+            boost_particle_1.gameObject.SetActive(false);
+            boost_particle_2.gameObject.SetActive(false);
+            boost_particle_3.gameObject.SetActive(false);
             
+            collision.gameObject.GetComponent<Collider2D>().enabled = false;
+
+            StartCoroutine(DestroyShip());
 
         }
     }
