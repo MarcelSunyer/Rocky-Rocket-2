@@ -3117,7 +3117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idle: {r: 1, g: 1, b: 1, a: 1}
-  idleColor: {r: 0.31299978, g: 0.8962264, b: 0.2494215, a: 1}
+  idleColor: {r: 0.27822578, g: 1, b: 0.38709667, a: 1}
   lerpSpeed: 1
   startUpdateColor: 0
   shipController: {fileID: 1448262378}
