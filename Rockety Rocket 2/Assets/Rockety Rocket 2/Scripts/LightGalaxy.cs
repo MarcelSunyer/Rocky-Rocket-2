@@ -6,37 +6,31 @@ using UnityEngine.UI;
 
 public class LightGalaxy : MonoBehaviour
 {
-    private SpriteRenderer galaxy;
+    public SpriteRenderer galaxy;
 
     private Button button;
+
+    public Color firstColor;
+
+    public Color secondColor;
 
     private void Start()
     {
         button = GetComponent<Button>();
-        galaxy = GetComponentInChildren<SpriteRenderer>();
 
-        if (button == null )
-        {
-            print("Button Null");
-        }
-
-        if ( galaxy == null )
-        {
-            print("Galaxy null");
-        }
+        button.image.color = secondColor;
     }
     private void Update()
     {
-        if (EventSystem.current.currentSelectedGameObject == button)
+
+        if (EventSystem.current.currentSelectedGameObject == button.gameObject)
         {
-            Debug.Log(this.button.name + " was selected");
+            button.image.color = firstColor;
+
         }
-    }
-    public void OnSelect(BaseEventData eventData)
-    {
-        if (eventData.selectedObject == button)
+        else
         {
-            Debug.Log(this.button.name + " was selected");
+            button.image.color = secondColor;
         }
     }
 }
