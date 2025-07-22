@@ -1,50 +1,50 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using DG.Tweening;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using DG.Tweening;
 using UnityEngine.UI;
+
 public class MenuManager : MonoBehaviour
 {
-    public GameObject canvasFather;
+    public RectTransform canvasFather;
 
     public Button button_1;
     public Button button_2;
+    public Button button_3;
 
+    private float screenWidth;
+    private float screenHeight;
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-
+        screenWidth = canvasFather.rect.width;
+        screenHeight = canvasFather.rect.height;
     }
 
     public void StartButton()
     {
-        canvasFather.transform.DOMoveY(-575, 1.34f,true);
-        button_2.Select();
-
-    }
-    public void SkinButton()
-    {
-        canvasFather.transform.DOMoveX(1050, 1.34f, false);
+        Vector2 targetPos = new Vector2(0, -screenHeight * 0.020f);
+        canvasFather.DOAnchorPos(targetPos, 1.34f);
         button_1.Select();
     }
-    public void SkinToMain()
-    {
-        canvasFather.transform.DOMoveX(401.5f, 1.34f, false);
 
+    public void SkinButton()
+    {
+        Vector2 targetPos = new Vector2(screenWidth * 0.018f, 0);
+        canvasFather.DOAnchorPos(targetPos, 1.34f);
+        button_2.Select();
     }
     public void SettingsButton()
     {
-        canvasFather.transform.DOMoveX(-525, 1.34f, true);
-    }
-
-    public void SelectedMap()
-    {
-        SceneManager.LoadScene("Main Scene");
+        Vector2 targetPos = new Vector2(-screenWidth * 0.019f, 0);
+        canvasFather.DOAnchorPos(targetPos, 1.34f);
+        button_3.Select();
     }
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void SkinToMain()
+    {
+        canvasFather.DOAnchorPos(Vector2.zero, 1.34f);
     }
 }
