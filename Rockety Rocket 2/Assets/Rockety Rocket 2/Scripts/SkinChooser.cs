@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class SkinChooser : MonoBehaviour
 {
@@ -23,19 +24,22 @@ public class SkinChooser : MonoBehaviour
     void Start()
     {
         leftSkin = skins[0].gameObject;
-        leftSkin.transform.localPosition = positionLeft;
+        leftSkin.transform.DOLocalMove(positionLeft, 0.4f);
 
         centerSkin = skins[1].gameObject;
         centerSkin.transform.localScale *= 1.5f;
-        centerSkin.transform.localPosition = positionCenter;
+        centerSkin.transform.DOLocalMove(positionCenter, 0.4f);
 
         rightSkin = skins[2].gameObject;
-        rightSkin.transform.localPosition = positionRight;
+        rightSkin.transform.DOLocalMove(positionRight, 0.4f);
 
         skins[3].gameObject.SetActive(false);
         skins[4].gameObject.SetActive(false);
         skins[5].gameObject.SetActive(false);
     }
+    
+    //Todo: Add the hiden ships on a place to make  arotation, like in the basball;
+        
     public void MoveQueueRight()
     {
         rightIndex = centerIndex;
@@ -46,18 +50,18 @@ public class SkinChooser : MonoBehaviour
         {
             leftIndex = 5;
         }
-
-        leftSkin = skins[leftIndex].gameObject;
         leftSkin.transform.localPosition = positionLeft;
+        leftSkin = skins[leftIndex].gameObject;
+        leftSkin.transform.DOLocalMove(positionLeft,0.4f);
         leftSkin.gameObject.SetActive(true);
 
         centerSkin = skins[centerIndex].gameObject;
         centerSkin.transform.localScale *= 1.5f;
-        centerSkin.transform.localPosition = positionCenter;
+        centerSkin.transform.DOLocalMove(positionCenter, 0.4f);
 
         rightSkin.gameObject.SetActive(false);
         rightSkin = skins[rightIndex].gameObject;
-        rightSkin.transform.localPosition = positionRight;
+        rightSkin.transform.DOLocalMove(positionRight, 0.4f);
         rightSkin.transform.localScale /= 1.5f;
 
     }
@@ -75,18 +79,19 @@ public class SkinChooser : MonoBehaviour
 
         leftSkin.gameObject.SetActive(false);
         leftSkin = skins[leftIndex].gameObject;
-        leftSkin.transform.localPosition = positionLeft;
+        leftSkin.transform.DOLocalMove(positionLeft,0.4f);
         leftSkin.transform.localScale /= 1.5f;
 
 
         centerSkin = skins[centerIndex].gameObject;
         centerSkin.transform.localScale *= 1.5f;
-        centerSkin.transform.localPosition = positionCenter;
+        centerSkin.transform.DOLocalMove(positionCenter, 0.4f);
 
 
         rightSkin = skins[rightIndex].gameObject;
-        rightSkin.transform.localPosition = positionRight;
+        rightSkin.transform.DOLocalMove(positionRight, 0.4f);
         rightSkin.gameObject.SetActive(true);
+
 
     }
 }
