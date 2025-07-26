@@ -5762,9 +5762,12 @@ MonoBehaviour:
   - {fileID: 759870365}
   - {fileID: 758154246}
   - {fileID: 1252677193}
+  position_L_Left: {x: -615, y: 299, z: 0}
   positionLeft: {x: -303, y: 412, z: 0}
   positionCenter: {x: 0, y: 489, z: 0}
+  position_C_Center: {x: 0, y: 220, z: 0}
   positionRight: {x: 303, y: 412, z: 0}
+  position_R_Right: {x: 615, y: 299, z: 0}
 --- !u!1 &1822148242
 GameObject:
   m_ObjectHideFlags: 0
