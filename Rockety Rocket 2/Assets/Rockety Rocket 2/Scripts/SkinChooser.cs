@@ -32,7 +32,7 @@ public class SkinChooser : MonoBehaviour
 
     int safeIndexRight = 5;
     int safeIndexCenter = 0;
-    int safeIndexLeft;
+    int safeIndexLeft = 1;
 
 
     // Start is called before the first frame update
@@ -111,29 +111,25 @@ public class SkinChooser : MonoBehaviour
         centerIndex = rightIndex;
         rightIndex = rightIndex + 1;
 
+        //Un dels errors es que esto es nulo, pq al r_right fa rightIndex +1, i d'aqui potser venen mes errors
         if (rightIndex > 5)
         {
             rightIndex = 0;
         }
 
+        safeIndexLeft = (leftIndex - 1 == -1) ? 0 : (safeIndexCenter + 1);
+        l_leftSkin = skins[safeIndexLeft].gameObject;
+        l_leftSkin.transform.DOLocalMove(position_L_Left, 0.4f);
 
         //Mestic liant molt i me matare
-        safeIndexCenter = (safeIndexCenter + 1 == 6) ? 0 : (safeIndexLeft + 1);
+        safeIndexCenter = (safeIndexLeft - 1 == -1) ? 0 : (safeIndexRight + 1);
         c_centerSkin = skins[safeIndexCenter].gameObject;
         c_centerSkin.transform.DOLocalMove(position_C_Center, 0.4f);
 
-        safeIndexRight = (safeIndexRight +1== 6) ? 0 : (safeIndexRight + 1);
+
+        safeIndexRight = (safeIndexCenter - 1 == -1) ? 0 : (rightIndex - 1);
         r_rightSkin = skins[safeIndexRight].gameObject;
         r_rightSkin.transform.DOLocalMove(position_R_Right, 0.4f);
-
-        safeIndexLeft = (leftIndex - 1 == -1) ? 0 : (leftIndex + 1);
-        l_leftSkin = skins[safeIndexLeft].gameObject;
-        l_leftSkin.transform.DOLocalMove(position_L_Left, 0.4f);
-       
-        
-
-       
-
 
         leftSkin = skins[leftIndex].gameObject;
         leftSkin.transform.DOLocalMove(positionLeft,0.4f);
