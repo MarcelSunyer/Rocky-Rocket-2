@@ -87,20 +87,26 @@ public class SkinChooser : MonoBehaviour
         leftSkin.transform.localPosition = positionLeft;
         leftSkin = skins[leftIndex].gameObject;
         leftSkin.transform.DOLocalMove(positionLeft,0.4f);
-        leftSkin.gameObject.SetActive(true);
+        FadeIn(skins[leftIndex]);
 
-        centerSkin = skins[centerIndex].gameObject;
+                centerSkin = skins[centerIndex].gameObject;
         centerSkin.transform.localScale *= 1.5f;
         centerSkin.transform.DOLocalMove(positionCenter, 0.4f);
 
-        rightSkin.gameObject.SetActive(false);
+
         rightSkin = skins[rightIndex].gameObject;
         rightSkin.transform.DOLocalMove(positionRight, 0.4f);
         rightSkin.transform.localScale /= 1.5f;
 
-        safeIndexRight = (rightIndex + 1 == 6) ? 5 : (rightIndex + 1);
+
+        safeIndexRight = (rightIndex + 1 == 6) ? 0 : (rightIndex + 1);
+        FadeOut(skins[safeIndexRight]);
+        r_rightSkin = skins[safeIndexRight].gameObject;
+        r_rightSkin.transform.DOLocalMove(position_R_Right, 0.4f);
+        
 
         safeIndexCenter = (safeIndexRight + 1 == 6) ? 0 : (safeIndexRight + 1);
+        
         c_centerSkin = skins[safeIndexCenter].gameObject;
         c_centerSkin.transform.DOLocalMove(position_C_Center, 0.4f);
     }
@@ -137,7 +143,8 @@ public class SkinChooser : MonoBehaviour
         centerSkin.transform.localScale *= 1.5f;
         centerSkin.transform.DOLocalMove(positionCenter, 0.4f);
         centerIndex = rightIndex;
-        skins[safeIndexLeft].gameObject.SetActive(false);
+        //skins[safeIndexLeft].gameObject.SetActive(false);
+        FadeOut(skins[safeIndexLeft]);
         rightIndex = rightIndex + 1;
        
         if (rightIndex > 5)
@@ -147,8 +154,21 @@ public class SkinChooser : MonoBehaviour
 
         rightSkin = skins[rightIndex].gameObject;
         rightSkin.transform.DOLocalMove(positionRight, 0.4f);
-        rightSkin.gameObject.SetActive(true);
+        FadeIn(skins[rightIndex]);
+        //rightSkin.gameObject.SetActive(true);
 
     
+    }
+
+    private void FadeOut(SpriteRenderer sr)
+    {
+        sr.DOFade(0f, 0.3f).OnComplete(() => sr.gameObject.SetActive(false));
+    }
+
+    private void FadeIn(SpriteRenderer sr)
+    {
+        sr.gameObject.SetActive(true);
+        //sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 0f);
+        sr.DOFade(1f, 0.3f);
     }
 }
