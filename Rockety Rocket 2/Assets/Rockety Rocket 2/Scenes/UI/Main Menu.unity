@@ -1262,6 +1262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 213162370}
   - component: {fileID: 213162369}
+  - component: {fileID: 213162371}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -1301,6 +1302,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &213162371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213162368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1bc073ef00485e4d959b342e0eb8037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  father: {fileID: 116310853}
+  levels:
+  - {fileID: 2093204252}
+  - {fileID: 459428423}
+  - {fileID: 485386611}
+  - {fileID: 59354830}
+  - {fileID: 1044319608}
+  - {fileID: 1446824268}
+  - {fileID: 2050042874}
+  - {fileID: 980597739}
+  - {fileID: 2122250085}
+  disabledStateSprite: {fileID: 21300000, guid: fdd0dea4aae65fb4ca96b450813ee8d7, type: 3}
 --- !u!1 &217717247
 GameObject:
   m_ObjectHideFlags: 0
@@ -2906,7 +2931,7 @@ MonoBehaviour:
     m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnDown: {fileID: 1132623466}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 2
@@ -9547,7 +9572,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 21300000, guid: 920abf401cecbc54692490dcb2d4bad9, type: 3}
     m_SelectedSprite: {fileID: 21300000, guid: af5f6fcd963b6174d87176a905bac8f7, type: 3}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: 1c8686d54bf71c548a1b24f31309554f, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
