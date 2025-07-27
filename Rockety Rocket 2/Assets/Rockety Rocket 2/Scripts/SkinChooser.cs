@@ -30,9 +30,9 @@ public class SkinChooser : MonoBehaviour
     public Vector3 position_R_Right;
 
 
-    int safeIndexRight = 5;
-    int safeIndexCenter = 0;
-    int safeIndexLeft = 1;
+    int safeIndexRight = 3;
+    int safeIndexCenter = 4;
+    int safeIndexLeft = 5;
 
 
     // Start is called before the first frame update
@@ -107,41 +107,47 @@ public class SkinChooser : MonoBehaviour
 
     public void MoveQueueLeft()
     {
-        leftIndex = centerIndex;
-        centerIndex = rightIndex;
-        rightIndex = rightIndex + 1;
 
         //Un dels errors es que esto es nulo, pq al r_right fa rightIndex +1, i d'aqui potser venen mes errors
+      
+
+        safeIndexRight = (safeIndexCenter - 1 == -1) ? 0 : (safeIndexCenter);
+        r_rightSkin = skins[safeIndexRight].gameObject;
+        r_rightSkin.transform.DOLocalMove(position_R_Right, 0.4f);
+
+        safeIndexCenter = (safeIndexLeft - 1 == -1) ? 0 : (safeIndexLeft);
+        c_centerSkin = skins[safeIndexCenter].gameObject;
+        c_centerSkin.transform.DOLocalMove(position_C_Center, 0.4f);
+
+        safeIndexLeft = (leftIndex - 1 == -1) ? 0 : (leftIndex);
+        l_leftSkin = skins[safeIndexLeft].gameObject;
+        l_leftSkin.transform.DOLocalMove(position_L_Left, 0.4f);
+
+
+
+        leftIndex = centerIndex;
+  
+        leftSkin = skins[leftIndex].gameObject;
+        leftSkin.transform.DOLocalMove(positionLeft,0.4f);
+        leftSkin.transform.localScale /= 1.5f;
+
+        centerIndex = rightIndex;
+
+        centerSkin = skins[centerIndex].gameObject;
+        centerSkin.transform.localScale *= 1.5f;
+        centerSkin.transform.DOLocalMove(positionCenter, 0.4f);
+        centerIndex = rightIndex;
+        skins[safeIndexLeft].gameObject.SetActive(false);
+        rightIndex = rightIndex + 1;
+       
         if (rightIndex > 5)
         {
             rightIndex = 0;
         }
 
-        safeIndexLeft = (leftIndex - 1 == -1) ? 0 : (safeIndexCenter + 1);
-        l_leftSkin = skins[safeIndexLeft].gameObject;
-        l_leftSkin.transform.DOLocalMove(position_L_Left, 0.4f);
-
-        //Mestic liant molt i me matare
-        safeIndexCenter = (safeIndexLeft - 1 == -1) ? 0 : (safeIndexRight + 1);
-        c_centerSkin = skins[safeIndexCenter].gameObject;
-        c_centerSkin.transform.DOLocalMove(position_C_Center, 0.4f);
-
-
-        safeIndexRight = (safeIndexCenter - 1 == -1) ? 0 : (rightIndex - 1);
-        r_rightSkin = skins[safeIndexRight].gameObject;
-        r_rightSkin.transform.DOLocalMove(position_R_Right, 0.4f);
-
-        leftSkin = skins[leftIndex].gameObject;
-        leftSkin.transform.DOLocalMove(positionLeft,0.4f);
-        leftSkin.transform.localScale /= 1.5f;
-
-        centerSkin = skins[centerIndex].gameObject;
-        centerSkin.transform.localScale *= 1.5f;
-        centerSkin.transform.DOLocalMove(positionCenter, 0.4f);
-
         rightSkin = skins[rightIndex].gameObject;
         rightSkin.transform.DOLocalMove(positionRight, 0.4f);
-        //rightSkin.gameObject.SetActive(true);
+        rightSkin.gameObject.SetActive(true);
 
     
     }
