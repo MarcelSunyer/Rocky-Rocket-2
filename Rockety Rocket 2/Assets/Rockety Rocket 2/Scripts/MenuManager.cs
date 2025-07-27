@@ -10,6 +10,8 @@ public class MenuManager : MonoBehaviour
     public Button button_2;
     public Button button_3;
 
+    public Button button_4;
+
     private float screenWidth;
     private float screenHeight;
 
@@ -46,5 +48,11 @@ public class MenuManager : MonoBehaviour
     public void SkinToMain()
     {
         canvasFather.DOAnchorPos(Vector2.zero, 1.34f);
+    }
+    public void Galaxy_1()
+    {
+        Vector2 targetPos = new Vector2(screenWidth * 0.030f, -screenHeight * 0.040f);
+        canvasFather.DOAnchorPos(targetPos, 1.34f);
+        button_4.Select();
     }
 }

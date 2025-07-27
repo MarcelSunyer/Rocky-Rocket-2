@@ -6,7 +6,7 @@ public class GenerateParallax : MonoBehaviour
 {
     public float radius = 1.0f;
     public GameObject star;
-    private GameObject[] stars = new GameObject[150];
+    public GameObject[] stars = new GameObject[150];
     [Range(0f, 1f)]
     public float alpha = 0.5f;
 
