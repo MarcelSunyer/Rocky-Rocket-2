@@ -212,7 +212,6 @@ GameObject:
   - component: {fileID: 59354829}
   - component: {fileID: 59354833}
   - component: {fileID: 59354832}
-  - component: {fileID: 59354831}
   - component: {fileID: 59354830}
   m_Layer: 5
   m_Name: Level_4
@@ -297,21 +296,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &59354831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 59354828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9634705e5436f7a45b1061a0428ca04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  galaxy: {fileID: 0}
-  firstColor: {r: 1, g: 1, b: 1, a: 1}
-  secondColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &59354832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,6 +479,7 @@ GameObject:
   - component: {fileID: 116310856}
   - component: {fileID: 116310855}
   - component: {fileID: 116310854}
+  - component: {fileID: 116310857}
   m_Layer: 0
   m_Name: MilkyWay
   m_TagString: Untagged
@@ -602,6 +587,43 @@ Transform:
   - {fileID: 567963601}
   m_Father: {fileID: 1404420124}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &116310857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116310853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1bc073ef00485e4d959b342e0eb8037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateNumber: 6
+  updateBool: 0
+  father: {fileID: 0}
+  levels:
+  - {fileID: 1132623466}
+  - {fileID: 459428423}
+  - {fileID: 485386611}
+  - {fileID: 59354830}
+  - {fileID: 1044319608}
+  - {fileID: 1446824268}
+  - {fileID: 2050042874}
+  - {fileID: 980597739}
+  - {fileID: 2122250085}
+  - {fileID: 2093204252}
+  disabledStateSprite:
+  - {fileID: 1132623468}
+  - {fileID: 459428425}
+  - {fileID: 485386613}
+  - {fileID: 59354832}
+  - {fileID: 1044319610}
+  - {fileID: 1446824270}
+  - {fileID: 2050042876}
+  - {fileID: 980597741}
+  - {fileID: 2122250087}
+  - {fileID: 2093204254}
 --- !u!1 &122088667
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,7 +635,6 @@ GameObject:
   - component: {fileID: 122088668}
   - component: {fileID: 122088672}
   - component: {fileID: 122088671}
-  - component: {fileID: 122088670}
   - component: {fileID: 122088669}
   m_Layer: 5
   m_Name: Galaxy_6_Button
@@ -687,21 +708,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &122088670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 122088667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9634705e5436f7a45b1061a0428ca04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  galaxy: {fileID: 0}
-  firstColor: {r: 1, g: 1, b: 1, a: 1}
-  secondColor: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
 --- !u!114 &122088671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1262,7 +1268,6 @@ GameObject:
   m_Component:
   - component: {fileID: 213162370}
   - component: {fileID: 213162369}
-  - component: {fileID: 213162371}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -1302,30 +1307,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &213162371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 213162368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1bc073ef00485e4d959b342e0eb8037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  father: {fileID: 116310853}
-  levels:
-  - {fileID: 2093204252}
-  - {fileID: 459428423}
-  - {fileID: 485386611}
-  - {fileID: 59354830}
-  - {fileID: 1044319608}
-  - {fileID: 1446824268}
-  - {fileID: 2050042874}
-  - {fileID: 980597739}
-  - {fileID: 2122250085}
-  disabledStateSprite: {fileID: 21300000, guid: fdd0dea4aae65fb4ca96b450813ee8d7, type: 3}
 --- !u!1 &217717247
 GameObject:
   m_ObjectHideFlags: 0
@@ -2024,7 +2005,6 @@ GameObject:
   - component: {fileID: 459428422}
   - component: {fileID: 459428426}
   - component: {fileID: 459428425}
-  - component: {fileID: 459428424}
   - component: {fileID: 459428423}
   m_Layer: 5
   m_Name: Level_2
@@ -2109,21 +2089,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &459428424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459428421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9634705e5436f7a45b1061a0428ca04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  galaxy: {fileID: 0}
-  firstColor: {r: 1, g: 1, b: 1, a: 1}
-  secondColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &459428425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2173,7 +2138,6 @@ GameObject:
   - component: {fileID: 485386610}
   - component: {fileID: 485386614}
   - component: {fileID: 485386613}
-  - component: {fileID: 485386612}
   - component: {fileID: 485386611}
   m_Layer: 5
   m_Name: Level_3
@@ -2258,21 +2222,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &485386612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485386609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9634705e5436f7a45b1061a0428ca04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  galaxy: {fileID: 0}
-  firstColor: {r: 1, g: 1, b: 1, a: 1}
-  secondColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &485386613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2350,7 +2299,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 36.46, y: -29.2}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1216, y: 725}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &503819300
@@ -3530,7 +3479,6 @@ GameObject:
   - component: {fileID: 722295464}
   - component: {fileID: 722295468}
   - component: {fileID: 722295467}
-  - component: {fileID: 722295466}
   - component: {fileID: 722295465}
   m_Layer: 5
   m_Name: Galaxy_4_Button
@@ -3604,21 +3552,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &722295466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 722295463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9634705e5436f7a45b1061a0428ca04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  galaxy: {fileID: 0}
-  firstColor: {r: 1, g: 1, b: 1, a: 1}
-  secondColor: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
 --- !u!114 &722295467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3668,7 +3601,6 @@ GameObject:
   - component: {fileID: 743865108}
   - component: {fileID: 743865112}
   - component: {fileID: 743865111}
-  - component: {fileID: 743865110}
   - component: {fileID: 743865109}
   m_Layer: 5
   m_Name: Galaxy_5_Button
@@ -3742,21 +3674,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &743865110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 743865107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9634705e5436f7a45b1061a0428ca04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  galaxy: {fileID: 0}
-  firstColor: {r: 1, g: 1, b: 1, a: 1}
-  secondColor: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
 --- !u!114 &743865111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4460,7 +4377,6 @@ GameObject:
   - component: {fileID: 980597738}
   - component: {fileID: 980597742}
   - component: {fileID: 980597741}
-  - component: {fileID: 980597740}
   - component: {fileID: 980597739}
   m_Layer: 5
   m_Name: Level_8
@@ -4545,21 +4461,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &980597740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 980597737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9634705e5436f7a45b1061a0428ca04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  galaxy: {fileID: 0}
-  firstColor: {r: 1, g: 1, b: 1, a: 1}
-  secondColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &980597741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4821,7 +4722,6 @@ GameObject:
   - component: {fileID: 1044319607}
   - component: {fileID: 1044319611}
   - component: {fileID: 1044319610}
-  - component: {fileID: 1044319609}
   - component: {fileID: 1044319608}
   m_Layer: 5
   m_Name: Level_5
@@ -4906,21 +4806,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1044319609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1044319606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9634705e5436f7a45b1061a0428ca04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  galaxy: {fileID: 0}
-  firstColor: {r: 1, g: 1, b: 1, a: 1}
-  secondColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1044319610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4970,7 +4855,6 @@ GameObject:
   - component: {fileID: 1132623465}
   - component: {fileID: 1132623469}
   - component: {fileID: 1132623468}
-  - component: {fileID: 1132623467}
   - component: {fileID: 1132623466}
   m_Layer: 5
   m_Name: Level_1
@@ -5055,21 +4939,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1132623467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1132623464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9634705e5436f7a45b1061a0428ca04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  galaxy: {fileID: 0}
-  firstColor: {r: 1, g: 1, b: 1, a: 1}
-  secondColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1132623468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6400,7 +6269,6 @@ GameObject:
   - component: {fileID: 1446824267}
   - component: {fileID: 1446824271}
   - component: {fileID: 1446824270}
-  - component: {fileID: 1446824269}
   - component: {fileID: 1446824268}
   m_Layer: 5
   m_Name: Level_6
@@ -6485,21 +6353,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1446824269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1446824266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9634705e5436f7a45b1061a0428ca04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  galaxy: {fileID: 0}
-  firstColor: {r: 1, g: 1, b: 1, a: 1}
-  secondColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1446824270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7877,7 +7730,6 @@ GameObject:
   - component: {fileID: 1794614541}
   - component: {fileID: 1794614545}
   - component: {fileID: 1794614544}
-  - component: {fileID: 1794614543}
   - component: {fileID: 1794614542}
   m_Layer: 5
   m_Name: Galaxy_2_Button
@@ -7963,21 +7815,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1794614543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1794614540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9634705e5436f7a45b1061a0428ca04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  galaxy: {fileID: 0}
-  firstColor: {r: 1, g: 1, b: 1, a: 1}
-  secondColor: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
 --- !u!114 &1794614544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9038,7 +8875,6 @@ GameObject:
   - component: {fileID: 2050042873}
   - component: {fileID: 2050042877}
   - component: {fileID: 2050042876}
-  - component: {fileID: 2050042875}
   - component: {fileID: 2050042874}
   m_Layer: 5
   m_Name: Level_7
@@ -9123,21 +8959,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2050042875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2050042872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9634705e5436f7a45b1061a0428ca04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  galaxy: {fileID: 0}
-  firstColor: {r: 1, g: 1, b: 1, a: 1}
-  secondColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &2050042876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9187,7 +9008,6 @@ GameObject:
   - component: {fileID: 2093204251}
   - component: {fileID: 2093204255}
   - component: {fileID: 2093204254}
-  - component: {fileID: 2093204253}
   - component: {fileID: 2093204252}
   m_Layer: 5
   m_Name: Level_10
@@ -9272,21 +9092,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2093204253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2093204250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9634705e5436f7a45b1061a0428ca04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  galaxy: {fileID: 0}
-  firstColor: {r: 1, g: 1, b: 1, a: 1}
-  secondColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &2093204254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9336,7 +9141,6 @@ GameObject:
   - component: {fileID: 2093869185}
   - component: {fileID: 2093869189}
   - component: {fileID: 2093869188}
-  - component: {fileID: 2093869187}
   - component: {fileID: 2093869186}
   m_Layer: 5
   m_Name: Galaxy_3_Button
@@ -9410,21 +9214,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2093869187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2093869184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9634705e5436f7a45b1061a0428ca04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  galaxy: {fileID: 0}
-  firstColor: {r: 1, g: 1, b: 1, a: 1}
-  secondColor: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
 --- !u!114 &2093869188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9511,7 +9300,6 @@ GameObject:
   - component: {fileID: 2122250084}
   - component: {fileID: 2122250088}
   - component: {fileID: 2122250087}
-  - component: {fileID: 2122250086}
   - component: {fileID: 2122250085}
   m_Layer: 5
   m_Name: Level_9
@@ -9596,21 +9384,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2122250086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2122250083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9634705e5436f7a45b1061a0428ca04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  galaxy: {fileID: 0}
-  firstColor: {r: 1, g: 1, b: 1, a: 1}
-  secondColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &2122250087
 MonoBehaviour:
   m_ObjectHideFlags: 0
