@@ -17,11 +17,17 @@ public class ShipController : MonoBehaviour
     private float rotationInput;
     public float boostInput;
 
-    private SpriteRenderer ship;
+    public SpriteRenderer ship;
 
     public ParticleSystem destroy_particle_1;
     public ParticleSystem destroy_particle_2;
     public ParticleSystem destroy_particle_3;
+
+    public int galaxy;
+    public int level;
+    public bool firstGame;
+
+    public int skin;
 
     private void Start()
     {
@@ -81,4 +87,19 @@ public class ShipController : MonoBehaviour
         yield return new WaitForSeconds(2);
         Destroy(this.gameObject);
     }
+
+    public void SavePlayer()
+    {
+        SaveSystem.SavePlayer(this);
+    }
+
+    public void LoadPlayer()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+        level = data.level;
+        galaxy = data.galaxy;
+        ship = data.spriteRenderer;
+        firstGame = data.firstGame;
+    }
+
 }

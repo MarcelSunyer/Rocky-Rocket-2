@@ -89,7 +89,7 @@ public class SkinChooser : MonoBehaviour
         leftSkin.transform.DOLocalMove(positionLeft,0.4f);
         FadeIn(skins[leftIndex]);
 
-                centerSkin = skins[centerIndex].gameObject;
+        centerSkin = skins[centerIndex].gameObject;
         centerSkin.transform.localScale *= 1.5f;
         centerSkin.transform.DOLocalMove(positionCenter, 0.4f);
 
