@@ -18,7 +18,7 @@ public class Save_Load : MonoBehaviour
     {
         galaxy = 1;
         level = 1;
-        Debug.Log(Application.persistentDataPath);
+
     }
     public void SavePlayer()
     {
