@@ -22,8 +22,6 @@ public class LevelsButtons : MonoBehaviour
             disabledStateSprite[i].color = Color.grey;
 
             levels[i].enabled = false;
-
-
         }
 
     }
