@@ -23,12 +23,6 @@ public class ShipController : MonoBehaviour
     public ParticleSystem destroy_particle_2;
     public ParticleSystem destroy_particle_3;
 
-    public int galaxy;
-    public int level;
-    public bool firstGame;
-
-    public int skin;
-
     private void Start()
     {
         ship = GetComponent<SpriteRenderer>();
@@ -88,18 +82,5 @@ public class ShipController : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    public void SavePlayer()
-    {
-        SaveSystem.SavePlayer(this);
-    }
-
-    public void LoadPlayer()
-    {
-        PlayerData data = SaveSystem.LoadPlayer();
-        level = data.level;
-        galaxy = data.galaxy;
-        ship = data.spriteRenderer;
-        firstGame = data.firstGame;
-    }
 
 }

@@ -10,13 +10,20 @@ public class PlayerData
     public int level;
     public bool firstGame;
 
-    public SpriteRenderer spriteRenderer;
-    public PlayerData (ShipController ship)
+    public int skin;
+
+    public bool fullscrean;
+    public bool audio_fx;
+    public bool audio_music;
+    public PlayerData (Save_Load save_load)
     {
-        galaxy = ship.galaxy;
-        level = ship.level;
-        firstGame = ship.firstGame;
-        spriteRenderer = ship.ship;
+        galaxy = save_load.galaxy;
+        level = save_load.level;
+        firstGame = save_load.firstGame;
+        skin = save_load.skin;
+        fullscrean = save_load.fullscrean;
+        audio_fx = save_load.audio_fx;
+        audio_music = save_load.audio_music;
 
     }
 }
