@@ -43,9 +43,9 @@ public class Save_Load : MonoBehaviour
 
     //If button selected but dont find it when scene is changed
 
-    If (EventSystem.currentSelectedGameObject == skinChooser)
-    {
+    //If (EventSystem.currentSelectedGameObject == skinChooser)
+    //{
 
-    }
+    //}
 
 }
