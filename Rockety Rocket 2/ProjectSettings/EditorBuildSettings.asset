@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Rockety Rocket 2/Scenes/UI/Main Menu.unity
+    path: Assets/RocketyRocket2/Scenes/UI/Main Menu.unity
     guid: 6ea584a90bdcbbd4da4886f369eb76cd
   - enabled: 1
-    path: Assets/Rockety Rocket 2/Scenes/Main Scene.unity
+    path: Assets/RocketyRocket2/Scenes/Main Scene.unity
     guid: 06de3422ea69964418747510538a9785
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 5cae969e405f9d9448804d113d248d09, type: 3}
