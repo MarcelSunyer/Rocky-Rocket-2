@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Rockety Rocket 2/Scenes/UI/Main Menu.unity
+- path: Assets/RocketyRocket2/Scenes/UI/Main Menu.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

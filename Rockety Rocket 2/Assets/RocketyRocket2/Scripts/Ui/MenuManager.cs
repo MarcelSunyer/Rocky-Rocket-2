@@ -7,7 +7,6 @@ namespace RocketyRocket2
 {
     public class MenuManager : MonoBehaviour
     {
-
         public RectTransform canvasFather;
 
         public Button GoToGalaxyScreen;
@@ -25,7 +24,18 @@ namespace RocketyRocket2
             screenWidth = canvasFather.rect.width;
             screenHeight = canvasFather.rect.height;
 
+            //Start
             GoToGalaxyScreen.onClick.AddListener(StartButton);
+            BackStart.onClick.AddListener(StartToMain);
+
+            //Skin
+            Skins.onClick.AddListener(SkinButton);
+            BackStart.onClick.AddListener(SkinToMain);
+
+            //Settings
+            Settings.onClick.AddListener(SettingsButton);
+            BackSettings.onClick.AddListener(SettingsToMain);
+
         }
 
         public void StartButton()
@@ -41,7 +51,7 @@ namespace RocketyRocket2
             Vector2 targetPos = new Vector2(screenWidth * 0.018f, 0);
             Tween tween = canvasFather.DOAnchorPos(targetPos, 1.34f);
             tween.Play();
-            //button_2.Select();
+            BackSkin.Select();
             
         }
         public void SettingsButton()
@@ -65,7 +75,7 @@ namespace RocketyRocket2
             canvasFather.DOAnchorPos(Vector2.zero, 1.34f);
             Skins.Select();
         }
-        public void OptionsToMain()
+        public void SettingsToMain()
         {
             canvasFather.DOAnchorPos(Vector2.zero, 1.34f);
             Settings.Select();
