@@ -57,15 +57,23 @@ namespace RocketyRocket2
 
             //MilkyWay
             MilkyWay.onClick.AddListener(GoMilkyWay);
-
+            MilkyWayBack.onClick.AddListener(MilkyWayToGalaxy);
 
             //SagDeg
+            SagDeg.onClick.AddListener(GoSagDeg);
+            SagDegBack.onClick.AddListener(SagDegToGalaxy);
 
             //LMC
+            LMC.onClick.AddListener(GoLMC);
+            LMCBack.onClick.AddListener(LMCToGalaxy);
 
             //SMC
+            SMC.onClick.AddListener(GoSMC);
+            SMCBack.onClick.AddListener(SMCToGalaxy);
 
             //Messier32
+            Messier32.onClick.AddListener(GoMessier32);
+            Messier32Back.onClick.AddListener(Messier32ToGalaxy);
 
         }
 
@@ -129,59 +137,72 @@ namespace RocketyRocket2
 
             MilkyWayBack.Select();
         }
-        //public void Galaxy_2()
-        //{
-        //    Vector2 targetPos = new Vector2(0, -screenHeight * 0.052f);
-        //    canvasFather.DOAnchorPos(targetPos, 1.34f);
-        //    button_5.Select();
-        //}
-        //public void Galaxy_3()
-        //{
-        //    Vector2 targetPos = new Vector2(-screenWidth * 0.030f, -screenHeight * 0.040f);
-        //    canvasFather.DOAnchorPos(targetPos, 1.34f);
-        //    button_6.Select();
-        //}
-        //public void Galaxy_4()
-        //{
-        //    Vector2 targetPos = new Vector2(screenWidth * 0.0355f, -screenHeight * 0.0175f);
-        //    canvasFather.DOAnchorPos(targetPos, 1.34f);
-        //    button_7.Select();
-        //}
-        //public void Galaxy_5()
-        //{
-        //    Vector2 targetPos = new Vector2(-screenWidth * 0.0355f, -screenHeight * 0.0175f);
-        //    canvasFather.DOAnchorPos(targetPos, 1.34f);
-        //    button_8.Select();
-        //}
-        //public void ReturnToTheGalaxy_1()
-        //{
-        //    Vector2 targetPos = new Vector2(0, -screenHeight * 0.020f);
-        //    canvasFather.DOAnchorPos(targetPos, 1.34f);
-        //    button_9.Select();
-        //}
-        //public void ReturnToTheGalaxy_2()
-        //{
-        //    Vector2 targetPos = new Vector2(0, -screenHeight * 0.020f);
-        //    canvasFather.DOAnchorPos(targetPos, 1.34f);
-        //    button_10.Select();
-        //}
-        //public void ReturnToTheGalaxy_3()
-        //{
-        //    Vector2 targetPos = new Vector2(0, -screenHeight * 0.020f);
-        //    canvasFather.DOAnchorPos(targetPos, 1.34f);
-        //    button_11.Select();
-        //}
-        //public void ReturnToTheGalaxy_4()
-        //{
-        //    Vector2 targetPos = new Vector2(0, -screenHeight * 0.020f);
-        //    canvasFather.DOAnchorPos(targetPos, 1.34f);
-        //    button_12.Select();
-        //}
-        //public void ReturnToTheGalaxy_5()
-        //{
-        //    Vector2 targetPos = new Vector2(0, -screenHeight * 0.020f);
-        //    canvasFather.DOAnchorPos(targetPos, 1.34f);
-        //    button_13.Select();
-        //}
+        public void MilkyWayToGalaxy()
+        {
+            Vector2 targetPos = new Vector2(0, -screenHeight * 0.020f);
+            Tween tween = canvasFather.DOAnchorPos(targetPos, 1.34f);
+            tween.Play();
+            MilkyWay.Select();
+        }
+
+        public void GoSagDeg()
+        {
+            Vector2 targetPos = new Vector2(0, -screenHeight * 0.052f);
+            Tween tween = canvasFather.DOAnchorPos(targetPos, 1.34f);
+            tween.Play();
+            SagDegBack.Select();
+        }
+        public void SagDegToGalaxy()
+        {
+            Vector2 targetPos = new Vector2(0, -screenHeight * 0.020f);
+            Tween tween = canvasFather.DOAnchorPos(targetPos, 1.34f);
+            tween.Play();
+            SagDeg.Select();
+        }
+
+        public void GoLMC()
+        {
+            Vector2 targetPos = new Vector2(-screenWidth * 0.030f, -screenHeight * 0.040f);
+            Tween tween = canvasFather.DOAnchorPos(targetPos, 1.34f);
+            tween.Play();
+            LMCBack.Select();
+        }
+        public void LMCToGalaxy()
+        {
+            Vector2 targetPos = new Vector2(0, -screenHeight * 0.020f);
+            Tween tween = canvasFather.DOAnchorPos(targetPos, 1.34f);
+            tween.Play();
+            LMC.Select();
+        }
+
+        public void GoSMC()
+        {
+            Vector2 targetPos = new Vector2(screenWidth * 0.0355f, -screenHeight * 0.0175f);
+            Tween tween = canvasFather.DOAnchorPos(targetPos, 1.34f);
+            tween.Play();
+            SMCBack.Select();
+        }
+        public void SMCToGalaxy()
+        {
+            Vector2 targetPos = new Vector2(0, -screenHeight * 0.020f);
+            Tween tween = canvasFather.DOAnchorPos(targetPos, 1.34f);
+            tween.Play();
+            SMC.Select();
+        }
+
+        public void GoMessier32()
+        {
+            Vector2 targetPos = new Vector2(-screenWidth * 0.0355f, -screenHeight * 0.0175f);
+            Tween tween = canvasFather.DOAnchorPos(targetPos, 1.34f);
+            tween.Play();
+            Messier32Back.Select();
+        }
+        public void Messier32ToGalaxy()
+        {
+            Vector2 targetPos = new Vector2(0, -screenHeight * 0.020f);
+            Tween tween = canvasFather.DOAnchorPos(targetPos, 1.34f);
+            tween.Play();
+            Messier32.Select();
+        }
     }
 }
