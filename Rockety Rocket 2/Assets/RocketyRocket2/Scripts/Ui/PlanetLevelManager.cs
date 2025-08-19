@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,17 +8,26 @@ namespace RocketyRocket2
 {
     public class PlanetLevelManager : MonoBehaviour
     {
+        public int LevelsOperative = 1;
+        public Color BlockedLevel;
+
         [SerializeField] private Button[] levels;
+        [SerializeField] private Button updateLevels;
+
         private bool canBePlayed;
-        public int levelsOperative;
 
-        private void Update()
+        private void Start()
         {
-            for (int i = 0; i < levelsOperative; i++)
+            updateLevels.onClick.AddListener(UpdateLevels);
+        }
+        private void UpdateLevels()
+        {
+            for (int i = levels.Length - 1; i >= LevelsOperative; --i)
             {
-                levels[i].image.color = Color.white;
+                levels[i].image.color = BlockedLevel;
+                levels[i].GetComponentInChildren<TextMeshProUGUI>().color = BlockedLevel;
 
-                levels[i].enabled = true;
+                levels[i].interactable = false;
             }
 
         }
