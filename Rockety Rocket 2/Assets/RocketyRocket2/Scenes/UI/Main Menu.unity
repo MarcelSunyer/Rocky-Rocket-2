@@ -1038,11 +1038,11 @@ Transform:
   m_GameObject: {fileID: 116310853}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 192, y: 1554.1, z: -6550.7285}
-  m_LocalScale: {x: 178.27832, y: 178.27832, z: 178.27832}
+  m_LocalPosition: {x: -1.5550842, y: 248.55164, z: -6525}
+  m_LocalScale: {x: 178.27832, y: 491.80222, z: 178.27832}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1517945357}
+  m_Father: {fileID: 1794614541}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &116677953
 GameObject:
@@ -1477,6 +1477,7 @@ RectTransform:
   m_Children:
   - {fileID: 1763805833}
   - {fileID: 1189043910}
+  - {fileID: 506191091}
   m_Father: {fileID: 1281262677}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1491,7 +1492,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122088667}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -1527,19 +1528,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 122088671}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 213162369}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: Galaxy_5
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &122088671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5191,13 +5180,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 506191090}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.21004824, w: 0.97769105}
-  m_LocalPosition: {x: 615, y: 1341, z: -6550.7285}
-  m_LocalScale: {x: 239.1122, y: 239.1122, z: 239.11224}
+  m_LocalRotation: {x: -0, y: -0, z: -0.043313514, w: -0.9990615}
+  m_LocalPosition: {x: 4, y: 249, z: -6525}
+  m_LocalScale: {x: 256.24393, y: 499.20685, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1517945357}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -24.25}
+  m_Father: {fileID: 122088668}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 4.965}
 --- !u!95 &506191092
 Animator:
   serializedVersion: 5
@@ -5262,7 +5251,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -398338298, guid: 61c5e5e26a9d4a840a37482a95a2e9ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -7759,6 +7748,7 @@ RectTransform:
   m_Children:
   - {fileID: 108762524}
   - {fileID: 859515664}
+  - {fileID: 1983330383}
   m_Father: {fileID: 1281262677}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -7773,7 +7763,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 722295463}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -7809,19 +7799,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 722295467}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 213162369}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: Galaxy_3
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &722295467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7893,6 +7871,7 @@ RectTransform:
   m_Children:
   - {fileID: 1486726094}
   - {fileID: 217717248}
+  - {fileID: 1822148245}
   m_Father: {fileID: 1281262677}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -7907,7 +7886,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 743865107}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -7943,19 +7922,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 743865111}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 213162369}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: Galaxy_4
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &743865111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8766,8 +8733,8 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: 920abf401cecbc54692490dcb2d4bad9, type: 3}
-    m_SelectedSprite: {fileID: 21300000, guid: af5f6fcd963b6174d87176a905bac8f7, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: af5f6fcd963b6174d87176a905bac8f7, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 920abf401cecbc54692490dcb2d4bad9, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -12315,8 +12282,8 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: 920abf401cecbc54692490dcb2d4bad9, type: 3}
-    m_SelectedSprite: {fileID: 21300000, guid: af5f6fcd963b6174d87176a905bac8f7, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: af5f6fcd963b6174d87176a905bac8f7, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 920abf401cecbc54692490dcb2d4bad9, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -13256,6 +13223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1404420124}
+  - component: {fileID: 1404420125}
   m_Layer: 0
   m_Name: --------Galaxies--------
   m_TagString: Untagged
@@ -13283,10 +13251,29 @@ Transform:
   - {fileID: 1460525079}
   - {fileID: 73265739}
   - {fileID: 246332500}
-  - {fileID: 1517945357}
   - {fileID: 1281262677}
   m_Father: {fileID: 503819299}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1404420125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404420123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12cce4539d7b49f4e903abc80f3b2609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Galaxies:
+  - {fileID: 1794614542}
+  - {fileID: 2093869186}
+  - {fileID: 722295465}
+  - {fileID: 743865109}
+  - {fileID: 122088669}
+  UpdateStateGalaxies: {fileID: 1263858462}
+  galaxiesLocked: 1
 --- !u!1 &1416110967
 GameObject:
   m_ObjectHideFlags: 0
@@ -13314,11 +13301,11 @@ Transform:
   m_GameObject: {fileID: 1416110967}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 483.73, y: 1556, z: -6550.7285}
-  m_LocalScale: {x: 189.10542, y: 189.10542, z: 189.10542}
+  m_LocalPosition: {x: 1.1749268, y: 253.79309, z: -6525}
+  m_LocalScale: {x: 189.10542, y: 521.6701, z: 189.10542}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1517945357}
+  m_Father: {fileID: 2093869185}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1416110969
 Animator:
@@ -15228,42 +15215,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512515149}
   m_CullTransparentMesh: 1
---- !u!1 &1517945356
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1517945357}
-  m_Layer: 0
-  m_Name: Sprites
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1517945357
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1517945356}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 116310856}
-  - {fileID: 506191091}
-  - {fileID: 1822148245}
-  - {fileID: 1983330383}
-  - {fileID: 1416110968}
-  m_Father: {fileID: 1404420124}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1526500325
 GameObject:
   m_ObjectHideFlags: 0
@@ -18126,6 +18077,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 0.3625, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 116310856}
   - {fileID: 1545066765}
   - {fileID: 1211826807}
   m_Father: {fileID: 1281262677}
@@ -18178,19 +18130,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1794614544}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 213162369}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: Galaxy_1
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1794614544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18808,13 +18748,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822148242}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.89457667, w: 0.44691458}
-  m_LocalPosition: {x: 330, y: 1336, z: -6550.7285}
-  m_LocalScale: {x: 225.16963, y: 225.16963, z: 225.16966}
+  m_LocalRotation: {x: -0, y: -0, z: 0.6849974, w: 0.72854555}
+  m_LocalPosition: {x: 2.6999207, y: 237.44812, z: -6525}
+  m_LocalScale: {x: 360.35974, y: 360.68732, z: 225.16966}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1517945357}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 126.908}
+  m_Father: {fileID: 743865108}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 86.471}
 --- !u!1 &1833970947
 GameObject:
   m_ObjectHideFlags: 0
@@ -20599,13 +20539,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1983330380}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.13584842, w: 0.99072963}
-  m_LocalPosition: {x: 774, y: 1553, z: -6550.7285}
-  m_LocalScale: {x: 162.74437, y: 162.74437, z: 162.74437}
+  m_LocalRotation: {x: -0, y: -0, z: 0.012871847, w: 0.99991715}
+  m_LocalPosition: {x: 0.4749756, y: 241.03447, z: -6525}
+  m_LocalScale: {x: 178.14864, y: 318.7899, z: 162.74437}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1517945357}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -15.615}
+  m_Father: {fileID: 722295464}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.475}
 --- !u!1 &1987868197
 GameObject:
   m_ObjectHideFlags: 0
@@ -21076,8 +21016,8 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: 920abf401cecbc54692490dcb2d4bad9, type: 3}
-    m_SelectedSprite: {fileID: 21300000, guid: af5f6fcd963b6174d87176a905bac8f7, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: af5f6fcd963b6174d87176a905bac8f7, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 920abf401cecbc54692490dcb2d4bad9, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -22174,6 +22114,7 @@ RectTransform:
   m_Children:
   - {fileID: 1987868198}
   - {fileID: 1544187253}
+  - {fileID: 1416110968}
   m_Father: {fileID: 1281262677}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -22188,7 +22129,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093869184}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -22224,19 +22165,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2093869188}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 213162369}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: Galaxy_2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2093869188
 MonoBehaviour:
   m_ObjectHideFlags: 0
