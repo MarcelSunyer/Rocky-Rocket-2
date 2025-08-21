@@ -27,15 +27,30 @@ namespace RocketyRocket2
             float top = camPos.y + deadZoneSize.y * 0.5f;
 
             Vector3 targetPos = camPos;
+            //Debug.Log(camPos.x);
+            //Debug.Log(deadZoneSize.x);
 
-            // if ship exits dead zone, move camera
-            if (shipPos.x < left) targetPos.x = shipPos.x + deadZoneSize.x * 0.5f;
-            if (shipPos.x > right) targetPos.x = shipPos.x - deadZoneSize.x * 0.5f;
-            if (shipPos.y < bottom) targetPos.y = shipPos.y + deadZoneSize.y * 0.5f;
-            if (shipPos.y > top) targetPos.y = shipPos.y - deadZoneSize.y * 0.5f;
+            if (shipPos.x < left)
+            {
+                targetPos.x = shipPos.x + deadZoneSize.x * 0.5f;
+            }
 
-            // smooth move
-            targetPos.z = camPos.z; // keep same Z
+            if (shipPos.x > right)
+            {
+                targetPos.x = shipPos.x - deadZoneSize.x * 0.5f;
+            }
+
+            if (shipPos.y < bottom) 
+            { 
+                targetPos.y = shipPos.y + deadZoneSize.y * 0.5f; 
+            }
+
+            if (shipPos.y > top) 
+            { 
+                targetPos.y = shipPos.y - deadZoneSize.y * 0.5f; 
+            }
+
+            targetPos.z = camPos.z; 
             transform.position = Vector3.SmoothDamp(camPos, targetPos, ref velocity, smoothSpeed);
         }
     }
