@@ -25,9 +25,6 @@ namespace RocketyRocket2
             {
                 Galaxies[i].image.color = Color.black;
                 Galaxies[i].GetComponentInChildren<SpriteRenderer>().color = Color.black;
-                Navigation nave = new Navigation();
-
-//                Galaxies[i].navigation.selectOnRight = false;
 
                 Galaxies[i].interactable = false;
 

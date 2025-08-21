@@ -26,7 +26,7 @@ namespace RocketyRocket2
             {
                 levels[i].image.color = BlockedLevel;
                 levels[i].GetComponentInChildren<TextMeshProUGUI>().color = BlockedLevel;
-
+                levels[i].enabled = false;
                 levels[i].interactable = false;
             }
 
