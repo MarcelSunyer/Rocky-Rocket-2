@@ -97,7 +97,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.00042767823, y: 0.00042768382}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -108,7 +108,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.09, y: 0.11}
+  m_Size: {x: 0.10026026, y: 0.118551105}
   m_EdgeRadius: 0
 --- !u!212 &8980951526198230892
 SpriteRenderer:
@@ -287,9 +287,6 @@ MonoBehaviour:
   destroy_particle_1: {fileID: 7109183263139838475}
   destroy_particle_2: {fileID: 4839780365043670727}
   destroy_particle_3: {fileID: 2120162733935900336}
-  galaxy: 0
-  level: 0
-  firstGame: 0
 --- !u!1 &5232005615090170494
 GameObject:
   m_ObjectHideFlags: 0
