@@ -44,36 +44,52 @@ namespace RocketyRocket2
             screenHeight = canvasFather.rect.height;
 
             //Start
-            GoToGalaxyScreen.onClick.AddListener(StartButton);
-            BackStart.onClick.AddListener(StartToMain);
+            if(GoToGalaxyScreen !=null)
+                GoToGalaxyScreen.onClick.AddListener(StartButton);
+            if (BackStart != null)
+                BackStart.onClick.AddListener(StartToMain);
 
             //Skin
-            Skins.onClick.AddListener(SkinButton);
-            BackSkin.onClick.AddListener(SkinToMain);
+            if (Skins != null)
+                Skins.onClick.AddListener(SkinButton);
+            if (BackSkin != null)
+                BackSkin.onClick.AddListener(SkinToMain);
 
             //Settings
-            Settings.onClick.AddListener(SettingsButton);
-            BackSettings.onClick.AddListener(SettingsToMain);
+            if (Settings != null)
+                Settings.onClick.AddListener(SettingsButton);
+            if (BackSettings != null)
+                BackSettings.onClick.AddListener(SettingsToMain);
 
             //MilkyWay
-            MilkyWay.onClick.AddListener(GoMilkyWay);
-            MilkyWayBack.onClick.AddListener(MilkyWayToGalaxy);
+            if (MilkyWay != null)
+                MilkyWay.onClick.AddListener(GoMilkyWay);
+            if (MilkyWayBack != null)
+                MilkyWayBack.onClick.AddListener(MilkyWayToGalaxy);
 
             //SagDeg
-            SagDeg.onClick.AddListener(GoSagDeg);
-            SagDegBack.onClick.AddListener(SagDegToGalaxy);
+            if (SagDeg != null)
+                SagDeg.onClick.AddListener(GoSagDeg);
+            if (SagDegBack != null)
+                SagDegBack.onClick.AddListener(SagDegToGalaxy);
 
             //LMC
-            LMC.onClick.AddListener(GoLMC);
-            LMCBack.onClick.AddListener(LMCToGalaxy);
+            if (LMC != null)
+                LMC.onClick.AddListener(GoLMC);
+            if (LMCBack != null)
+                LMCBack.onClick.AddListener(LMCToGalaxy);
 
             //SMC
-            SMC.onClick.AddListener(GoSMC);
-            SMCBack.onClick.AddListener(SMCToGalaxy);
+            if (SMC != null)
+                SMC.onClick.AddListener(GoSMC);
+            if (SMCBack != null)
+                SMCBack.onClick.AddListener(SMCToGalaxy);
 
             //Messier32
-            Messier32.onClick.AddListener(GoMessier32);
-            Messier32Back.onClick.AddListener(Messier32ToGalaxy);
+            if (Messier32 != null)
+                Messier32.onClick.AddListener(GoMessier32);
+            if (Messier32Back != null)
+                Messier32Back.onClick.AddListener(Messier32ToGalaxy);
 
         }
 
