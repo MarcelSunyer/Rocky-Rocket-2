@@ -18,6 +18,10 @@ namespace RocketyRocket2
 
         private void Start()
         {
+            if (RocketyRocket2Game.Instance != null)
+            {
+                LevelsOperative = RocketyRocket2Game.Instance.SaveGameManager.Level[0];
+            }
             updateLevels.onClick.AddListener(UpdateLevels);
         }
         private void UpdateLevels()

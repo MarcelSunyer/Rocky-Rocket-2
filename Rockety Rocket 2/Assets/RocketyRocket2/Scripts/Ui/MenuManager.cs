@@ -40,9 +40,11 @@ namespace RocketyRocket2
 
         private void Start()
         {
-            screenWidth = canvasFather.rect.width;
-            screenHeight = canvasFather.rect.height;
-
+            if (canvasFather != null)
+            {
+                screenWidth = canvasFather.rect.width;
+                screenHeight = canvasFather.rect.height;
+            }
             //Start
             if(GoToGalaxyScreen !=null)
                 GoToGalaxyScreen.onClick.AddListener(StartButton);

@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace RocketyRocket2
 {
@@ -49,6 +51,9 @@ namespace RocketyRocket2
                 shipController.boost_particle_3.gameObject.SetActive(false);
 
                 Destroy(shipController);
+
+                RocketyRocket2Game.Instance.SaveGameManager.Level[0] += 1;
+                SceneManager.LoadScene("MainMenu");
 
             }
         }
