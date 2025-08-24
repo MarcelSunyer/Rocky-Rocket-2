@@ -124,7 +124,9 @@ namespace RocketyRocket2
         }
         public void Quit()
         {
+            RocketyRocket2Game.Instance.SaveGameManager.Save();
             Application.Quit();
+
         }
 
         public void StartToMain()
