@@ -6,7 +6,11 @@ namespace RocketyRocket2
 {
     public class SaveGameManager
     {
-        public int[] Level = new int[4];
+        public int Level_Green;
+        public int Level_Blue;
+        public int Level_Purple;
+        public int Level_Orange;
+        public int Level_Red;
         public int Galaxy;
         public int Skin;
 
@@ -16,32 +20,30 @@ namespace RocketyRocket2
 
         public void Save()
         {
-            for (int i = 0; i < 4; i++)
-            {               
-                PlayerPrefs.SetInt("Level", Level[i]);
-
-            }   
+            PlayerPrefs.SetInt("Level_Green", Level_Green);
+            PlayerPrefs.SetInt("Level_Blue", Level_Blue);
+            PlayerPrefs.SetInt("Level_Purple", Level_Purple);
+            PlayerPrefs.SetInt("Level_Orange", Level_Orange);
+            PlayerPrefs.SetInt("Level_Red", Level_Red);
 
             PlayerPrefs.SetInt("Galaxy", Galaxy);
 
             PlayerPrefs.SetInt("Skin", Skin);
 
             PlayerPrefs.Save();
-
-
         }
 
         public void Load() 
         {
-            for (int i = 0; i < 4; ++i)
-            {
-                Level[i] = PlayerPrefs.GetInt("Level", 1);
-            }
+            Level_Green = PlayerPrefs.GetInt("Level_Green", 1);
+            Level_Blue = PlayerPrefs.GetInt("Level_Blue", 1);
+            Level_Purple = PlayerPrefs.GetInt("Level_Purple", 1);
+            Level_Orange = PlayerPrefs.GetInt("Level_Orange", 1);
+            Level_Red = PlayerPrefs.GetInt("Level_Red", 1);
 
             Galaxy = PlayerPrefs.GetInt("Galaxy", 1);
-
             Skin = PlayerPrefs.GetInt("Skin", 0);
-        }
+        }   
 
 
         //PlayerPrefs.SetInt

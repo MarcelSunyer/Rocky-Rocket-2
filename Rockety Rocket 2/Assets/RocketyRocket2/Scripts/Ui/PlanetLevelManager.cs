@@ -10,17 +10,28 @@ namespace RocketyRocket2
     {
         public int LevelsOperative = 1;
         public Color BlockedLevel;
+        public int GalaxyNum;
 
         [SerializeField] private Button[] levels;
         [SerializeField] private Button updateLevels;
 
         private bool canBePlayed;
 
+
         private void Start()
         {
             if (RocketyRocket2Game.Instance != null)
             {
-                LevelsOperative = RocketyRocket2Game.Instance.SaveGameManager.Level[0];
+                if (GalaxyNum == 1)
+                    LevelsOperative = RocketyRocket2Game.Instance.SaveGameManager.Level_Green;
+                if (GalaxyNum == 2)
+                    LevelsOperative = RocketyRocket2Game.Instance.SaveGameManager.Level_Blue;
+                if (GalaxyNum == 3)
+                    LevelsOperative = RocketyRocket2Game.Instance.SaveGameManager.Level_Purple;
+                if (GalaxyNum == 4)
+                    LevelsOperative = RocketyRocket2Game.Instance.SaveGameManager.Level_Orange;
+                if (GalaxyNum == 5)
+                    LevelsOperative = RocketyRocket2Game.Instance.SaveGameManager.Level_Red;
             }
             updateLevels.onClick.AddListener(UpdateLevels);
         }

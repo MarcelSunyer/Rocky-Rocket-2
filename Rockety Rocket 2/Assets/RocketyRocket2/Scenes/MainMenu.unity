@@ -792,6 +792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelsOperative: 4
   BlockedLevel: {r: 0.3207547, g: 0.27464622, b: 0.24056603, a: 1}
+  GalaxyNum: 4
   levels:
   - {fileID: 1912094012}
   - {fileID: 1792315170}
@@ -3132,6 +3133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelsOperative: 1
   BlockedLevel: {r: 0.47058824, g: 0.28627452, b: 0.28627452, a: 1}
+  GalaxyNum: 5
   levels:
   - {fileID: 33692048}
   - {fileID: 145822094}
@@ -3634,6 +3636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelsOperative: 1
   BlockedLevel: {r: 0.18431373, g: 0.28235295, b: 0.2509804, a: 1}
+  GalaxyNum: 1
   levels:
   - {fileID: 1132623466}
   - {fileID: 459428423}
@@ -14273,6 +14276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelsOperative: 1
   BlockedLevel: {r: 0.2784314, g: 0.20392157, b: 0.32156864, a: 1}
+  GalaxyNum: 3
   levels:
   - {fileID: 1652922033}
   - {fileID: 971766930}
@@ -16487,6 +16491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelsOperative: 1
   BlockedLevel: {r: 0.13333334, g: 0.15686275, b: 0.3882353, a: 1}
+  GalaxyNum: 2
   levels:
   - {fileID: 544558676}
   - {fileID: 1809898830}

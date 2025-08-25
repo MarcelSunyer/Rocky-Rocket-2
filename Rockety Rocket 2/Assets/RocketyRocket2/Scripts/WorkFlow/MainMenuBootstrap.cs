@@ -12,7 +12,6 @@ namespace RocketyRocket2
         {
             PrepareGame();
             SceneManager.LoadScene("MainMenu");
-
         }
 
     }

@@ -8,7 +8,8 @@ namespace RocketyRocket2
 {
     public class SafeZone : MonoBehaviour
     {
-        private SpriteRenderer sprite;
+        public int GalaxyNum = 1;
+
         public UnityEngine.Color idle;
         public UnityEngine.Color idleColor;
 
@@ -17,6 +18,7 @@ namespace RocketyRocket2
 
         public ShipController shipController;
 
+        private SpriteRenderer sprite;
         void Start()
         {
             sprite = GetComponent<SpriteRenderer>();
@@ -51,7 +53,17 @@ namespace RocketyRocket2
 
                 Destroy(shipController);
 
-                RocketyRocket2Game.Instance.SaveGameManager.Level[0] += 1;
+                if (GalaxyNum == 1)
+                    RocketyRocket2Game.Instance.SaveGameManager.Level_Green += 1;
+                if (GalaxyNum == 2)
+                    RocketyRocket2Game.Instance.SaveGameManager.Level_Blue += 1;
+                if (GalaxyNum == 3)
+                    RocketyRocket2Game.Instance.SaveGameManager.Level_Purple += 1;
+                if (GalaxyNum == 4)
+                    RocketyRocket2Game.Instance.SaveGameManager.Level_Orange += 1;
+                if (GalaxyNum == 5)
+                    RocketyRocket2Game.Instance.SaveGameManager.Level_Red += 1;
+
                 SceneManager.LoadScene("MainMenu");
 
             }
