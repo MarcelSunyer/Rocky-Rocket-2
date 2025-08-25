@@ -12,8 +12,6 @@ namespace RocketyRocket2
         public Slider Restart;
         public GameObject Bar;
         public bool clicked = false;
-
-
         void Update()
         {
 
@@ -22,7 +20,7 @@ namespace RocketyRocket2
 
         private void RestartLevel()
         {
-            if (Input.GetKey(KeyCode.Escape))
+            if (Input.GetKey(KeyCode.R))
             {
                 Bar.SetActive(true);
                 Restart.value += 2;
@@ -40,7 +38,6 @@ namespace RocketyRocket2
             }
             if (Restart.value == 100)
             {
-
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
