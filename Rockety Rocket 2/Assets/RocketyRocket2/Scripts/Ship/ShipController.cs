@@ -6,6 +6,17 @@ namespace RocketyRocket2
 {
     public class ShipController : MonoBehaviour
     {
+        public enum StateShip
+        {
+            Stop,
+            Playing,
+            WithoutControls
+        }
+        public StateShip currentState = StateShip.Playing;
+        private Vector2 saveForce = Vector2.zero;
+        private Vector2 saveVelocity = Vector2.zero;
+        private bool stopToPlay = false;
+
         public ParticleSystem boost_particle_1;
         public ParticleSystem boost_particle_2;
         public ParticleSystem boost_particle_3;
@@ -26,15 +37,23 @@ namespace RocketyRocket2
 
         private void Start()
         {
+
             ship = GetComponent<SpriteRenderer>();
         }
         void FixedUpdate()
         {
+            switch(currentState)
+            {
+                case StateShip.Stop:
+                    StopShip();
+                    break;
+                case StateShip.Playing:
+                    MoveShip();
+                    break;
+                case StateShip.WithoutControls:
+                    break;
+            }
 
-            rigidbody2D.rotation -= rotationInput * rotationSpeed * Time.fixedDeltaTime;
-
-            Vector2 direction = transform.up;
-            rigidbody2D.AddForce(direction * boostInput * (boostForce / 1000));
 
             if (boostInput == 0)
             {
@@ -44,6 +63,37 @@ namespace RocketyRocket2
             }
         }
 
+        private void MoveShip()
+        {
+            if(stopToPlay)
+            {
+                boost_particle_1.gameObject.SetActive(true);
+                boost_particle_2.gameObject.SetActive(true);
+                boost_particle_3.gameObject.SetActive(false);
+                rigidbody2D.velocity = saveVelocity;
+                stopToPlay = false;
+            }
+            rigidbody2D.rotation -= rotationInput * rotationSpeed * Time.fixedDeltaTime;
+
+            Vector2 direction = transform.up;
+            saveForce = direction * boostInput * (boostForce / 1000);
+            rigidbody2D.AddForce(saveForce);
+            saveVelocity = rigidbody2D.velocity;
+            
+        }
+
+        private void StopShip()
+        {
+            boost_particle_1.gameObject.SetActive(false);
+            boost_particle_2.gameObject.SetActive(false);
+            boost_particle_3.gameObject.SetActive(false);
+            rotationInput = 0;
+
+            stopToPlay = true;
+            boostInput = 0;
+            rigidbody2D.AddForce(Vector2.zero);
+            rigidbody2D.velocity = Vector2.zero;
+        }
         public void Rotation(InputAction.CallbackContext context)
         {
             rotationInput = context.ReadValue<Vector2>().x;

@@ -9,14 +9,19 @@ namespace RocketyRocket2
 {
     public class TutorialAppear : MonoBehaviour
     {
+        [SerializeField] private ShipController shipState;
 
         [SerializeField] private GameObject cam;
 
         [SerializeField] private Button startGameplay;
 
+        [SerializeField] private GameObject restart;
+
 
         void Start()
         {
+
+           shipState.currentState = ShipController.StateShip.Stop;
            cam.GetComponent<CameraFollow>().enabled = false;
            startGameplay.Select();
            startGameplay.onClick.AddListener(StartGamePlay);
@@ -29,12 +34,19 @@ namespace RocketyRocket2
 
         private IEnumerator HideTutorialAndMove()
         {
-            Debug.Log("ASd");
-            Tween tween = gameObject.transform.DOMoveY(-500,3);
+
+            Tween tween = gameObject.transform.DOMoveY(-200, 2);
             tween.Play();
             yield return tween.WaitForCompletion();
 
             cam.GetComponent<CameraFollow>().enabled = true;
+            yield return new WaitForSeconds(2);
+            tween = restart.transform.DOMoveY(525, 2);
+            tween.Play();
+
+            shipState.currentState = ShipController.StateShip.Playing;
+
+
         }
 
     }
