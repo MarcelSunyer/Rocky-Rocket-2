@@ -15,8 +15,7 @@ namespace RocketyRocket2
 
         [SerializeField] private Button startGameplay;
 
-        [SerializeField] private GameObject restart;
-
+        [SerializeField] private Image fade;
 
         void Start()
         {
@@ -39,10 +38,11 @@ namespace RocketyRocket2
             tween.Play();
             yield return tween.WaitForCompletion();
 
+            tween = fade.DOFade(0f,1f);
+            tween.Play();
+
             cam.GetComponent<CameraFollow>().enabled = true;
             yield return new WaitForSeconds(2);
-            tween = restart.transform.DOMoveY(525, 2);
-            tween.Play();
 
             shipState.currentState = ShipController.StateShip.Playing;
 
