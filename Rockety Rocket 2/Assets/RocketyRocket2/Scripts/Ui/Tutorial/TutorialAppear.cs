@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,6 +27,10 @@ namespace RocketyRocket2
         [SerializeField] private Image notendGameplay;
 
         [SerializeField] private ShipTutorial tutorialScript;
+
+        [SerializeField] private SpriteRenderer goal;
+
+        [SerializeField] private SpriteRenderer arrow; 
 
         void Start()
         {
@@ -62,7 +67,9 @@ namespace RocketyRocket2
             tutorialScript.enabled = false;
             cam.GetComponent<CameraFollow>().enabled = true;
             yield return new WaitForSeconds(2);
+            goal.enabled = false;
 
+            arrow.enabled = false;
             shipState.currentState = ShipController.StateShip.Playing;
 
 
