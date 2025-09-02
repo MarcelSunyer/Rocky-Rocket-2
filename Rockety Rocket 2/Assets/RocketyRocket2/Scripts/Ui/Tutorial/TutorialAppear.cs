@@ -17,9 +17,10 @@ namespace RocketyRocket2
 
         [SerializeField] private Image fade;
 
+        [SerializeField] private ShipTutorial shipTutorial;
+
         void Start()
         {
-
            shipState.currentState = ShipController.StateShip.Stop;
            cam.GetComponent<CameraFollow>().enabled = false;
            startGameplay.Select();
@@ -40,6 +41,8 @@ namespace RocketyRocket2
 
             tween = fade.DOFade(0f,1f);
             tween.Play();
+
+            //Hide with fade DO image moving
 
             cam.GetComponent<CameraFollow>().enabled = true;
             yield return new WaitForSeconds(2);
