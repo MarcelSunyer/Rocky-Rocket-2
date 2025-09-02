@@ -17,7 +17,15 @@ namespace RocketyRocket2
 
         [SerializeField] private Image fade;
 
-        [SerializeField] private ShipTutorial shipTutorial;
+        [SerializeField] private ParticleSystem particleTutorial;
+
+        [SerializeField] private Image shipTutorial;
+
+        [SerializeField] private Image endTutorial;
+
+        [SerializeField] private Image notendGameplay;
+
+        [SerializeField] private ShipTutorial tutorialScript;
 
         void Start()
         {
@@ -41,9 +49,17 @@ namespace RocketyRocket2
 
             tween = fade.DOFade(0f,1f);
             tween.Play();
-
-            //Hide with fade DO image moving
-
+            particleTutorial.Stop();
+            
+            tween = shipTutorial.DOFade(0f, 1f);
+            tween.Play();
+           
+            tween = endTutorial.DOFade(0f, 1f);
+            tween.Play();
+            
+            tween = notendGameplay.DOFade(0f, 1f);
+            tween.Play();
+            tutorialScript.enabled = false;
             cam.GetComponent<CameraFollow>().enabled = true;
             yield return new WaitForSeconds(2);
 

@@ -8,12 +8,13 @@ namespace RocketyRocket2
     public class ShipTutorial : MonoBehaviour
     {
         public GameObject Ship;
+        public ParticleSystem particle;
         public float ShipMovement;
         private Vector2 InitialPosition;
 
         private void Start()
         {
-            InitialPosition = Ship.GetComponent<RectTransform>().position;
+            InitialPosition = Ship.GetComponent<RectTransform>().anchoredPosition;
             StartCoroutine(TutorialShip());
         }
         private IEnumerator TutorialShip()
@@ -21,13 +22,13 @@ namespace RocketyRocket2
             while (true)
             {
 
-                Ship.GetComponent<ParticleSystem>().Play();
-                Tween tween = Ship.GetComponent<RectTransform>().DOAnchorPosX(ShipMovement, 2.5f);
+                particle.Play();
+                Tween tween = Ship.GetComponent<RectTransform>().DOAnchorPosX(ShipMovement, 3.5f);
 
                 tween.Play();
                 yield return tween.WaitForCompletion();
-                Ship.GetComponent<RectTransform>().position = InitialPosition;
-                Ship.GetComponent<ParticleSystem>().Stop();
+                Ship.GetComponent<RectTransform>().anchoredPosition = InitialPosition;
+                particle.Stop();
                 yield return new WaitForSeconds(1.5f);
             }
         }
