@@ -16,7 +16,7 @@ namespace RocketyRocket2
 
         [SerializeField] private Image fade;
 
-        [SerializeField] private ParticleSystem particleTutorial;
+        [SerializeField] private GameObject particleTutorial;
 
         [SerializeField] private Image shipTutorial;
 
@@ -45,6 +45,7 @@ namespace RocketyRocket2
 
         private IEnumerator HideTutorialAndMove()
         {
+            particleTutorial.gameObject.SetActive(false);
 
             Tween tween = gameObject.transform.DOMoveY(-200, 2);
             tween.Play();
@@ -52,8 +53,7 @@ namespace RocketyRocket2
 
             tween = fade.DOFade(0f,1f);
             tween.Play();
-            particleTutorial.Stop();
-            
+
             tween = shipTutorial.DOFade(0f, 1f);
             tween.Play();
            

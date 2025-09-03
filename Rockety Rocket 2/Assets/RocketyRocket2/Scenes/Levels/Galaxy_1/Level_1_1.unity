@@ -572,6 +572,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upImage: {fileID: 281339798}
   downImage: {fileID: 451732592}
+  isTutorial: 0
+  cameraFollow: {fileID: 1251456067}
+  arrow: {fileID: 1262975335}
+  goal: {fileID: 1838526607}
 --- !u!1 &208656405
 GameObject:
   m_ObjectHideFlags: 0
@@ -7090,7 +7094,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &885646272
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9961,6 +9965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GalaxyNum: 1
+  PlanetNum: 1
   idle: {r: 1, g: 1, b: 1, a: 1}
   idleColor: {r: 0.27822578, g: 1, b: 0.38709667, a: 1}
   lerpSpeed: 1

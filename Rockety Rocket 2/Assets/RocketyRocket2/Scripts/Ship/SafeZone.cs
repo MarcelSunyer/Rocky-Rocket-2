@@ -9,6 +9,7 @@ namespace RocketyRocket2
     public class SafeZone : MonoBehaviour
     {
         public int GalaxyNum = 1;
+        public int PlanetNum = 1;
 
         public UnityEngine.Color idle;
         public UnityEngine.Color idleColor;
@@ -56,23 +57,23 @@ namespace RocketyRocket2
                 Destroy(shipController);
 
                 if (GalaxyNum == 1)
-                    RocketyRocket2Game.Instance.SaveGameManager.Level_Green = RocketyRocket2Game.Instance.SaveGameManager.Level_Green + 1;
+                    RocketyRocket2Game.Instance.SaveGameManager.Level_Green = PlanetNum +1;
                     RocketyRocket2Game.Instance.SaveGameManager.Save();
 
                 if (GalaxyNum == 2)
-                    RocketyRocket2Game.Instance.SaveGameManager.Level_Blue += 1;
+                    RocketyRocket2Game.Instance.SaveGameManager.Level_Blue = PlanetNum + 1;
                     RocketyRocket2Game.Instance.SaveGameManager.Save();
 
                 if (GalaxyNum == 3)
-                    RocketyRocket2Game.Instance.SaveGameManager.Level_Purple += 1;
+                    RocketyRocket2Game.Instance.SaveGameManager.Level_Purple = PlanetNum + 1;
                     RocketyRocket2Game.Instance.SaveGameManager.Save();
 
                 if (GalaxyNum == 4)
-                    RocketyRocket2Game.Instance.SaveGameManager.Level_Orange += 1;
+                    RocketyRocket2Game.Instance.SaveGameManager.Level_Orange = PlanetNum + 1;
                     RocketyRocket2Game.Instance.SaveGameManager.Save();
 
                 if (GalaxyNum == 5)
-                    RocketyRocket2Game.Instance.SaveGameManager.Level_Red += 1;
+                    RocketyRocket2Game.Instance.SaveGameManager.Level_Red = PlanetNum + 1;
                     RocketyRocket2Game.Instance.SaveGameManager.Save();
 
                 StartCoroutine(NextLevelAppear());

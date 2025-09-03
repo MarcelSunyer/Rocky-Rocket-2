@@ -24,9 +24,8 @@ namespace RocketyRocket2
 
         private void LoadNextLevel()
         {
-            //Update esto pq se fa amb qualsevol safezone que hi ha
             if (Galaxy == 1) {
-                //RocketyRocket2Game.Instance.SaveGameManager.Level_Green += 1;
+
                 SceneManager.LoadScene("Level_1_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Green.ToString());
             }
 
