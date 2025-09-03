@@ -19,6 +19,8 @@ namespace RocketyRocket2
         public ShipController shipController;
 
         private SpriteRenderer sprite;
+
+        [SerializeField] private GameObject endLevelUI;
         void Start()
         {
             sprite = GetComponent<SpriteRenderer>();
@@ -37,7 +39,7 @@ namespace RocketyRocket2
             }
 
         }
-        private void OnTriggerStay2D(Collider2D collision)
+        private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.CompareTag("Ship"))
             {
@@ -54,19 +56,33 @@ namespace RocketyRocket2
                 Destroy(shipController);
 
                 if (GalaxyNum == 1)
-                    RocketyRocket2Game.Instance.SaveGameManager.Level_Green += 1;
+                    RocketyRocket2Game.Instance.SaveGameManager.Level_Green = RocketyRocket2Game.Instance.SaveGameManager.Level_Green + 1;
+                    RocketyRocket2Game.Instance.SaveGameManager.Save();
+
                 if (GalaxyNum == 2)
                     RocketyRocket2Game.Instance.SaveGameManager.Level_Blue += 1;
+                    RocketyRocket2Game.Instance.SaveGameManager.Save();
+
                 if (GalaxyNum == 3)
                     RocketyRocket2Game.Instance.SaveGameManager.Level_Purple += 1;
+                    RocketyRocket2Game.Instance.SaveGameManager.Save();
+
                 if (GalaxyNum == 4)
                     RocketyRocket2Game.Instance.SaveGameManager.Level_Orange += 1;
+                    RocketyRocket2Game.Instance.SaveGameManager.Save();
+
                 if (GalaxyNum == 5)
                     RocketyRocket2Game.Instance.SaveGameManager.Level_Red += 1;
+                    RocketyRocket2Game.Instance.SaveGameManager.Save();
 
-                SceneManager.LoadScene("MainMenu");
+                StartCoroutine(NextLevelAppear());
 
             }
+        }
+        private IEnumerator NextLevelAppear()
+        {
+            yield return new WaitForSeconds(1);
+            endLevelUI.gameObject.SetActive(true);
         }
         private IEnumerator UpdateColor()
         {
