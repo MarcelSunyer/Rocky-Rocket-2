@@ -15,7 +15,12 @@ namespace RocketyRocket2
         {
             for (int i = 0; i < Levels.Length; i++)
             {
-                string levelName = Levels[i].name +"_"+ galaxy.ToString();
+                string levelName = Levels[i].name + "_" + galaxy.ToString();
+                if (i == 0)
+                {
+                    levelName = Levels[i].name + "_" + galaxy.ToString() + "_Tutorial";
+                }
+                
                 Levels[i].onClick.AddListener(()=> LoadLevel(levelName));
             }
         }

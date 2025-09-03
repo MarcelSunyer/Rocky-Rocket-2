@@ -31,8 +31,6 @@ namespace RocketyRocket2
             upTween.Play();
             downTween.Play();
 
-            
-
         }
         public void CloseAnim()
         {

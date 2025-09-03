@@ -24,23 +24,23 @@ namespace RocketyRocket2
 
         private void LoadNextLevel()
         {
+            //Update esto pq se fa amb qualsevol safezone que hi ha
             if (Galaxy == 1) {
                 //RocketyRocket2Game.Instance.SaveGameManager.Level_Green += 1;
                 SceneManager.LoadScene("Level_1_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Green.ToString());
-                Debug.Log("Level_1_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Green.ToString());
             }
 
             if (Galaxy == 2)
             {
-                SceneManager.LoadScene("Level_2_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Blue.ToString() + 1);
+                SceneManager.LoadScene("Level_2_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Blue.ToString());
             }
             if (Galaxy == 3)
             {
-                SceneManager.LoadScene("Level_3_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Purple.ToString() + 1);
+                SceneManager.LoadScene("Level_3_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Purple.ToString());
             }
             if (Galaxy == 4)
             {
-                SceneManager.LoadScene("Level_4_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Orange.ToString() + 1);
+                SceneManager.LoadScene("Level_4_" + RocketyRocket2Game.Instance.SaveGameManager.Level_Orange.ToString());
             }
             if (Galaxy == 5)
             {
@@ -49,7 +49,35 @@ namespace RocketyRocket2
         }
         private void LoadLevelWithoutTutorial()
         {
-            SceneManager.LoadScene("Level_1_1_Tutorial"); 
+            Scene currentScene = SceneManager.GetActiveScene();
+
+            if (currentScene.name == "Level_1_1_Tutorial")
+            {
+                SceneManager.LoadScene("Level_1_1");
+                return;
+            }
+            if (currentScene.name == "Level_2_1_Tutorial")
+            {
+                SceneManager.LoadScene("Level_2_1");
+                return;
+            }
+            if (currentScene.name == "Level_3_1_Tutorial")
+            {
+                SceneManager.LoadScene("Level_3_1");
+                return;
+            }
+            if (currentScene.name == "Level_4_1_Tutorial")
+            {
+                SceneManager.LoadScene("Level_4_1");
+                return;
+            }
+            if (currentScene.name == "Level_5_1_Tutorial")
+            {
+                SceneManager.LoadScene("Level_5_1");
+                return;
+            }
+
+            SceneManager.LoadScene(currentScene.name);
         }
 
         private void GoMainMenu()
