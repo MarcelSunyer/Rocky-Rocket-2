@@ -597,7 +597,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &193019143
 RectTransform:
   m_ObjectHideFlags: 0
@@ -637,6 +637,7 @@ MonoBehaviour:
   cameraFollow: {fileID: 1251456067}
   arrow: {fileID: 1262975335}
   goal: {fileID: 1838526607}
+  second: 3
 --- !u!1 &196026170
 GameObject:
   m_ObjectHideFlags: 0

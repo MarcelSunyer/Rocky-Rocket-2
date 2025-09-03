@@ -16,11 +16,21 @@ namespace RocketyRocket2
 
         [SerializeField] private SpriteRenderer arrow;
         [SerializeField] private SpriteRenderer goal;
+
+        [SerializeField] private float second;
         private void Start()
         {
-            arrow.enabled = false;
-            goal.enabled = false;
+
+            if(arrow != null)
+                arrow.enabled = false;
+
+            if(goal != null)
+                goal.enabled = false;
+
             StartCoroutine(OpenAnim());
+            
+
+
         }
 
         private IEnumerator Test()
@@ -32,23 +42,24 @@ namespace RocketyRocket2
 
         private IEnumerator OpenAnim()
         {
-            Tween upTween = upImage.transform.DOMoveY(2000, 3);
-            Tween downTween = downImage.transform.DOMoveY(-900, 3);
+            Tween upTween = upImage.transform.DOMoveY(2000, second);
+            Tween downTween = downImage.transform.DOMoveY(-900, second);
             upTween.Play();
             downTween.Play();
 
             if(!isTutorial)
             {
                 yield return new WaitForSeconds(2);
-                cameraFollow.enabled = true;
+                if (cameraFollow != null)
+                    cameraFollow.enabled = true;
 
             }
 
         }
         public void CloseAnim()
         {
-            Tween upTween = upImage.transform.DOMoveY(400, 3);
-            Tween downTween = downImage.transform.DOMoveY(200, 3);
+            Tween upTween = upImage.transform.DOMoveY(400, second);
+            Tween downTween = downImage.transform.DOMoveY(200, second);
             upTween.Play();
             downTween.Play();
         }
