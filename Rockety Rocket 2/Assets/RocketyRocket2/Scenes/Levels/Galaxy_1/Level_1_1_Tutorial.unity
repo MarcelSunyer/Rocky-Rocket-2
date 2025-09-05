@@ -633,7 +633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upImage: {fileID: 281339798}
   downImage: {fileID: 451732592}
-  isTutorial: 0
+  isTutorial: 1
   cameraFollow: {fileID: 1251456067}
   arrow: {fileID: 1262975335}
   goal: {fileID: 1838526607}
@@ -9749,7 +9749,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1185047601010162980}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce7d8121fc98b4643994fa7d9bbc2185, type: 3}
   m_Name: 
@@ -11635,6 +11635,14 @@ PrefabInstance:
     - target: {fileID: 2632728655352967896, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_Name
       value: Ship
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226054329544740250, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
+      propertyPath: IsTutorial
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7325495018755074532, guid: 574217dd22a0c564da718c1bd2d41259, type: 3}
       propertyPath: m_LocalScale.x

@@ -34,8 +34,10 @@ namespace RocketyRocket2
         {
            shipState.currentState = ShipController.StateShip.Stop;
            cam.GetComponent<CameraFollow>().enabled = false;
-           startGameplay.Select();
+
            startGameplay.onClick.AddListener(StartGamePlay);
+            startGameplay.Select();
+            shipState.enabled = false;
         }
 
         private void StartGamePlay()
@@ -68,6 +70,7 @@ namespace RocketyRocket2
             goal.enabled = false;
 
             arrow.enabled = false;
+            shipState.enabled = true;
             shipState.currentState = ShipController.StateShip.Playing;
 
 

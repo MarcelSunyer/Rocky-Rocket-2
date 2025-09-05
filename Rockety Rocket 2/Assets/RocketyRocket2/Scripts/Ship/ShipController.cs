@@ -35,8 +35,14 @@ namespace RocketyRocket2
        
         public GameObject[] skins;
 
+        [Header("TimeToStart")]
+        public float TimeToStart;
+
         void Start()
         {
+            currentState = StateShip.Stop;
+            StartCoroutine(WaitToStart());
+
             for (int i = 0; i < skins.Length; i++)
             {
                 if (skins[i].name == "Skin_" + RocketyRocket2Game.Instance.SaveGameManager.Skin)
@@ -48,6 +54,8 @@ namespace RocketyRocket2
                     skins[i].SetActive(false);
                 }
             }
+
+
         }
         void FixedUpdate()
         {
@@ -148,7 +156,11 @@ namespace RocketyRocket2
             Destroy(this.gameObject);
         }
 
-
+        private IEnumerator WaitToStart()
+        {
+            yield return new WaitForSeconds(TimeToStart);
+            currentState = StateShip.Playing;
+        }
     }
 }
 
