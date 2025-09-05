@@ -37,7 +37,6 @@ namespace RocketyRocket2
 
         public Button Messier32;
         public Button Messier32Back;
-
         private void Start()
         {
             if (canvasFather != null)
@@ -94,7 +93,6 @@ namespace RocketyRocket2
                 Messier32Back.onClick.AddListener(Messier32ToGalaxy);
 
         }
-
         public void StartButton()
         {
             Vector2 targetPos = new Vector2(0, -screenHeight * 0.020f);

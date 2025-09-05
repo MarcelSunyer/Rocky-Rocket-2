@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
+using RocketyRocket2;
 
 public class SkinChooser : MonoBehaviour
 {
@@ -29,6 +31,7 @@ public class SkinChooser : MonoBehaviour
     public Vector3 positionRight;
     public Vector3 position_R_Right;
 
+    public Button SkinSelector;
 
     int safeIndexRight = 3;
     int safeIndexCenter = 4;
@@ -61,6 +64,9 @@ public class SkinChooser : MonoBehaviour
         //skins[3].gameObject.SetActive(false);
         //skins[4].gameObject.SetActive(false);
         //skins[5].gameObject.SetActive(false);
+
+        if (SkinSelector != null)
+            SkinSelector.onClick.AddListener(SelectedSkin);
     }
 
     //Todo: Add the hiden ships on a place to make  arotation, like in the basball;
@@ -182,6 +188,6 @@ public class SkinChooser : MonoBehaviour
     public void SelectedSkin()
     {
         skinSelected = centerIndex;
-        Debug.Log(skinSelected);
+        RocketyRocket2Game.Instance.SaveGameManager.Skin = skinSelected;
     }
 }

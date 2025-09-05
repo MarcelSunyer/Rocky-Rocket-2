@@ -29,16 +29,25 @@ namespace RocketyRocket2
         private float rotationInput;
         public float boostInput;
 
-        public SpriteRenderer ship;
-
         public ParticleSystem destroy_particle_1;
         public ParticleSystem destroy_particle_2;
         public ParticleSystem destroy_particle_3;
+       
+        public GameObject[] skins;
 
-        private void Start()
+        void Start()
         {
-
-            ship = GetComponent<SpriteRenderer>();
+            for (int i = 0; i < skins.Length; i++)
+            {
+                if (skins[i].name == "Skin_" + RocketyRocket2Game.Instance.SaveGameManager.Skin)
+                {
+                    skins[i].SetActive(true);
+                }
+                else
+                {
+                    skins[i].SetActive(false);
+                }
+            }
         }
         void FixedUpdate()
         {
@@ -111,11 +120,15 @@ namespace RocketyRocket2
         {
             if (collision.gameObject.CompareTag("Asteroid"))
             {
+                for (int i = 0; i < skins.Length; i++)
+                {
+
+                    skins[i].SetActive(false);
+
+                }
                 destroy_particle_1.Play();
                 destroy_particle_2.Play();
                 destroy_particle_3.Play();
-
-                ship.enabled = false;
 
                 boost_particle_1.gameObject.SetActive(false);
                 boost_particle_2.gameObject.SetActive(false);
@@ -124,6 +137,8 @@ namespace RocketyRocket2
                 collision.gameObject.GetComponent<Collider2D>().enabled = false;
 
                 StartCoroutine(DestroyShip());
+
+               
 
             }
         }

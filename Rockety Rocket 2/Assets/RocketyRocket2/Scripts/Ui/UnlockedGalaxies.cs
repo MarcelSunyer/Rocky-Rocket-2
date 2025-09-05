@@ -20,6 +20,23 @@ namespace RocketyRocket2
 
         private void UnlockGalxies()
         {
+            if(RocketyRocket2Game.Instance.SaveGameManager.Level_Green ==11)
+            {
+                galaxiesLocked = 2;
+            }
+            if (RocketyRocket2Game.Instance.SaveGameManager.Level_Blue == 11)
+            {
+                galaxiesLocked = 3;
+            }
+            if (RocketyRocket2Game.Instance.SaveGameManager.Level_Purple == 11)
+            {
+                galaxiesLocked = 4;
+            }
+            if (RocketyRocket2Game.Instance.SaveGameManager.Level_Orange == 11)
+            {
+                galaxiesLocked = 5;
+            }
+
             for (int i = Galaxies.Length - 1; i >= galaxiesLocked; --i)
             {
                 Galaxies[i].image.color = Color.black;
